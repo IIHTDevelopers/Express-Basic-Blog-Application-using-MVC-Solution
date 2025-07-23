@@ -1,0 +1,8 @@
+extends layout.pug
+
+block content
+  h1= post.title
+  p= post.content
+  p Created at: #{post.createdAt}
+
+  a(href="/") Back to all posts

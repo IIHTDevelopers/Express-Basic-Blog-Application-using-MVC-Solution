@@ -1,0 +1,14 @@
+extends layout.pug
+
+block content
+  h1 Blog Posts
+  ul
+    each post in posts
+      li
+        a(href=`/post/${post.id}`)= post.title
+        | - 
+        a(href=`/edit/${post.id}`) Edit
+        | - 
+        a(href=`/delete/${post.id}`) Delete
+
+  a(href="/create") Create a new post
